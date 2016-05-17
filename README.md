@@ -38,11 +38,11 @@ http://ec2-52-35-19-236.us-west-2.compute.amazonaws.com/sports/
 
 * Edited ```/etc/ssh/sshd_config``` to disable password access and root remote access.  The service was restarted with ```sudo service ssh restart```
  
-* The public keys under root .ssh were copied to the users (```/home/user/.ssh/authorized_keys```) to allow key-based login
+* The public keys under root .ssh were copied to the users (```/home/user/.ssh/authorized_keys```) to allow key-based login.  Set the corresponding keys and directories to the appropriate rights.
  
 * Cloned the catalog project with git into ```/var/www/catalog```
 
-* After installing apache, configured ```/etc/apache2/sites-available/``` to connect to the above mentioned project
+* After installing apache, configured ```/etc/apache2/sites-available/``` to connect to the above mentioned project. Started (or restarted) with ```sudo /etc/init.d/apache2 reload```
 
 * After installing postgresql, created a user ```grader```, and created a database named ```catalog```
 
