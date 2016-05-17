@@ -32,6 +32,8 @@ http://ec2-52-35-19-236.us-west-2.compute.amazonaws.com/sports/
 
 ### Configurations
 
+* Change to Utc time with ```sudo dpkg-reconfigure tzdata```
+
 * Added users with ```adduser``` and gave them sudo permissions by adding the users to ```/etc/sudoers```
 
 * Edited ```/etc/ssh/sshd_config``` to disable password access and root remote access.  The service was restarted with ```sudo service ssh restart```
@@ -46,3 +48,15 @@ http://ec2-52-35-19-236.us-west-2.compute.amazonaws.com/sports/
 
 * Correctly set the connection strings in the cloned project, and executed the following files ```database_setup.py data.py```
 
+### Third party resources used
+
+* UFW
+  * https://help.ubuntu.com/community/UFW
+* Timezones
+  * http://askubuntu.com/questions/138423/how-do-i-change-my-timezone-to-utc-gmt
+* Setting up Apache and Flask 
+  * http://www.bogotobogo.com/python/Flask/Python_Flask_HelloWorld_App_with_Apache_WSGI_Ubuntu14.php
+  * https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps
+* PostgreSQL
+  * https://www.digitalocean.com/community/tutorials/how-to-secure-postgresql-on-an-ubuntu-vps
+  * http://www.postgresql.org/docs/9.1/static/sql-alterrole.html
